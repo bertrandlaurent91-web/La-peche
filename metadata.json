@@ -1,0 +1,7 @@
+{
+  "name": "Légende de la Mer Android",
+  "description": "Immortalisez votre prise légendaire en Bretagne avec l'IA.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
