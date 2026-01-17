@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clipChildren="false">
+
+    <TextView
+        android:id="@+id/bandFreq"
+        android:text="1K"
+        android:textColor="@color/text_dim"
+        android:textSize="10sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clipChildren="false">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#2A2A2A"
+            android:layout_gravity="center"/>
+
+        <SeekBar
+            android:id="@+id/bandSeek"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:rotation="270"
+            android:max="60"
+            android:progress="30"
+            android:layout_gravity="center"
+            android:splitTrack="false"
+            android:padding="0dp"
+            android:thumbTint="@color/white"/>
+    </FrameLayout>
+</LinearLayout>

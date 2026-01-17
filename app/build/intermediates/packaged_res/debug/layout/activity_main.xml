@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/panel_bg"
+        android:padding="10dp"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btnEarLeft"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="GAUCHE"
+            android:textStyle="bold"
+            android:backgroundTint="@color/neon_blue"
+            android:textColor="@color/black_bg"
+            android:layout_marginEnd="5dp"
+            app:cornerRadius="6dp"/>
+
+        <Button
+            android:id="@+id/btnEarRight"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="DROITE"
+            android:textStyle="bold"
+            android:backgroundTint="@color/off_grey"
+            android:textColor="@color/text_dim"
+            android:layout_marginStart="5dp"
+            app:cornerRadius="6dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="horizontal"
+        android:background="@color/panel_bg"
+        android:layout_margin="10dp"
+        android:padding="4dp"
+        android:elevation="4dp"
+        android:backgroundTint="#1A1A1A">
+
+        <include layout="@layout/item_fader" android:id="@+id/inc_band0"/>
+        <include layout="@layout/item_fader" android:id="@+id/inc_band1"/>
+        <include layout="@layout/item_fader" android:id="@+id/inc_band2"/>
+        <include layout="@layout/item_fader" android:id="@+id/inc_band3"/>
+        <include layout="@layout/item_fader" android:id="@+id/inc_band4"/>
+        <include layout="@layout/item_fader" android:id="@+id/inc_band5"/>
+        <include layout="@layout/item_fader" android:id="@+id/inc_band6"/>
+        <include layout="@layout/item_fader" android:id="@+id/inc_band7"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/panel_bg"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="AMPLIFICATION"
+                android:textStyle="bold"
+                android:textColor="@color/text_bright"
+                android:textSize="14sp"
+                android:letterSpacing="0.1"/>
+
+            <TextView
+                android:id="@+id/txtAmpValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30%"
+                android:textColor="@color/neon_green"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="30"
+            android:progressTint="@color/neon_green"
+            android:thumbTint="@color/white"
+            android:layout_marginBottom="25dp"/>
+
+        <Button
+            android:id="@+id/btnPower"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="POWER ON"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/neon_green"
+            android:textColor="@color/black_bg"
+            android:elevation="6dp"
+            app:cornerRadius="15dp"/>
+    </LinearLayout>
+</LinearLayout>
