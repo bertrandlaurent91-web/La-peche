@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-      <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://cdn.tailwindcss.com https://api.anthropic.com;">
+    <!-- Politique de sécurité mise à jour pour autoriser l'exécution inline et eval (nécessaire pour Tailwind JIT et Vite) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://aistudiocdn.com; script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://aistudiocdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src 'self' https://generativelanguage.googleapis.com https://*.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com;">
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#003366" />
@@ -12,6 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script>
+      // Cette partie nécessite 'unsafe-inline'
       tailwind.config = {
         theme: {
           extend: {
@@ -33,10 +36,9 @@
         }
       }
     </script>
-  <script type="module" crossorigin src="/La-peche/assets/index-C9relN_6.js"></script>
+  <script type="module" crossorigin src="/La-peche/assets/index-CWaZw1bm.js"></script>
 </head>
   <body class="bg-breton-white text-breton-dark select-none">
     <div id="root"></div>
-    <!-- Suppression du / devant index.tsx pour le rendre relatif -->
   </body>
 </html>
